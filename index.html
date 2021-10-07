@@ -1,10 +1,72 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ctaetcsh.com</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>ctaetcsh</title>
+
+        <link rel="stylesheet" href="https://cdn.ctaetcsh.com/css/main.css"> <!--CHANGE BACK TO CTCDN BEFORE COMMIT!-->
+
+        <script src="https://cdn.ctaetcsh.com/js/three.min.js"></script>
+        <script src="https://cdn.ctaetcsh.com/js/vanta.waves.min.js"></script>
+        <script>
+            if (screen.width < 750) {
+                alert("Your screen is too small to view this page. Content may be inaccessable or corrupted.")
+            }
+        </script>
     </head>
     <body>
-        <h1>This page will be updated soon.</h1>
-        <p>Updates: <a href="https://twitter.com/ctaetcsh">@ctaetcsh</a></p>
+        <div id="background">
+            <!--Navigation Bar-->
+            <ul id="navbar">
+                <li id="navbarit"><a href="https://ctaetcsh.com" id="navbarli" class="active">Home</a></li>
+                <li id="navbarit"><a href="https://ctaetcsh.com/cpg" id="navbarli">Cat Photo Gallery</a></li>
+                <li id="navbarit"><a href="https://ctaetcsh.com/resources" id="navbarli">Resources</a></li>
+                <li id="navbarit"><a href="https://ctaetcsh.com/links" id="navbarli">Links</a></li>
+                <li id="navbarit"><a href="https://ctaetcsh.com/contact" id="navbarli">Contact</a></li>
+                <li id="navbarit" style="float: right;"><a href="https://github.com/ctaetcsh/ctaetcshcom" id="navbarli">Page Source</a></li> <!--Right align, CSS animation to reveal text with code icon-->
+            </ul>
+
+            <!--Center of page container-->
+            <div id="center">
+                
+                <!--Contains side by side divs-->
+                <div style="display: flex; width: 690px; margin-right: 0;">
+
+                    <div style="margin-right: 2em;">
+                        <img src="https://cdn.ctaetcsh.com/img/ctaetcshfull.png" alt="cat" width="150" style="border-radius: 3em;"> <br><br>
+                        <a href="https://twitter.com/ctaetcsh"><img src="https://cdn.ctaetcsh.com/icons/twitter.svg" alt="twitter" width="25px"></a>
+                        <a href="https://github.com/ctaetcsh"><img src="https://cdn.ctaetcsh.com/icons/github.svg" alt="github" width="25px"></a>
+                        <a onclick="alert('test')" id="discordclick" href=""><img src="https://cdn.ctaetcsh.com/icons/discord.svg" alt="discord" width="25px"></a> 
+                        <a onclick="alert('test')" id="emailclick" href=""><img src="https://cdn.ctaetcsh.com/icons/envelope-fill.svg" alt="email" width="25px"></a>
+                    </div>
+                    
+                    <div style="text-align: left; word-wrap: normal;">
+                        <h1 style="margin: 0;">about:ctaetcsh</h1>
+                        <p>
+                            Hi! My name is Nathan, I'm a computer nerd from Portland that loves cats, biking and video games.
+                            I hate trying to write a description for myself but here we go: 
+                            I'm interested in Graphic and UI Design, programming, computer hardware and networking. I like
+                            listening to music, doing small programming projects and spending time with friends. That's basically
+                            it, so if you wanna know more read through my infrequent blog posts lol.
+                        </p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+            <!--bottom right copyright notice-->
+            <a style="position: absolute; left: 1em; bottom: 1em; text-align: left; color: white;">Copyright © 2021 Nathan Ritchie</a>
+        </div>
+        <script>
+            VANTA.WAVES({
+              el: "#background",
+              mouseControls: true,
+              touchControls: false,
+              gyroControls: false,
+              scale: 1.00
+            })
+            </script>
     </body>
 </html>
