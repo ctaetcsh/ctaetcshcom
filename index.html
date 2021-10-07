@@ -9,11 +9,8 @@
 
         <script src="https://cdn.ctaetcsh.com/js/three.min.js"></script>
         <script src="https://cdn.ctaetcsh.com/js/vanta.waves.min.js"></script>
-        <script>
-            if (screen.width < 750) {
-                alert("Your screen is too small to view this page. Content may be inaccessable or corrupted.")
-            }
-        </script>
+        <script src="https://cdn.ctaetcsh.com/js/mobileredir.js"></script>
+        <script src="https://cdn.ctaetcsh.com/js/functions.js"></script>
     </head>
     <body>
         <div id="background">
@@ -34,11 +31,11 @@
                 <div style="display: flex; width: 690px; margin-right: 0;">
 
                     <div style="margin-right: 2em;">
-                        <img src="https://cdn.ctaetcsh.com/img/ctaetcshfull.png" alt="cat" width="150" style="border-radius: 3em;"> <br><br>
-                        <a href="https://twitter.com/ctaetcsh"><img src="https://cdn.ctaetcsh.com/icons/twitter.svg" alt="twitter" width="25px"></a>
-                        <a href="https://github.com/ctaetcsh"><img src="https://cdn.ctaetcsh.com/icons/github.svg" alt="github" width="25px"></a>
-                        <a onclick="alert('test')" id="discordclick" href=""><img src="https://cdn.ctaetcsh.com/icons/discord.svg" alt="discord" width="25px"></a> 
-                        <a onclick="alert('test')" id="emailclick" href=""><img src="https://cdn.ctaetcsh.com/icons/envelope-fill.svg" alt="email" width="25px"></a>
+                        <img src="https://cdn.ctaetcsh.com/img/ctaetcshfull.png" alt="cat" width="150" style="border-radius: 3em;" id="lecat" onclick="clickLeFuckingCat()"> <br><br>
+                        <a href="https://twitter.com/ctaetcsh" id="twitterlink"><img src="https://cdn.ctaetcsh.com/icons/twitter.svg" alt="twitter" width="25px"></a>
+                        <a href="https://github.com/ctaetcsh" id="githublink"><img src="https://cdn.ctaetcsh.com/icons/github.svg" alt="github" width="25px"></a>
+                        <a class="nocoloredlinks" onclick="discordClickable()" id="discordclick" href="javascript:void(0)"><img src="https://cdn.ctaetcsh.com/icons/discord.svg" alt="discord" width="25px"></a> 
+                        <a class="nocoloredlinks" onclick="emailClickable()" id="emailclick" href="javascript:void(0)"><img src="https://cdn.ctaetcsh.com/icons/envelope-fill.svg" alt="email" width="25px"></a>
                     </div>
                     
                     <div style="text-align: left; word-wrap: normal;">
