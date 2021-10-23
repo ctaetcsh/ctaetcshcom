@@ -31,8 +31,12 @@
         <meta property="twitter:image" content="https://cdn.ctaetcsh.com/img/ctaetcshfull.png">
     </head>
     <body>
+
         <div id="background">
-            <!--Navigation Bar-->
+
+            <!--
+                Top anchored navigation bar, yoinked prettymuch straight from W3schools lol.
+            -->
             <ul id="navbar">
                 <li id="navbarit"><a href="https://ctaetcsh.com" id="navbarli" class="active">Home</a></li>
                 <li id="navbarit"><a href="https://ctaetcsh.com/catphotos" id="navbarli">Cat Photo Gallery</a></li>
@@ -44,12 +48,29 @@
                 <li id="navbarit" style="float: right;"><a href="https://github.com/ctaetcsh/ctaetcshcom" id="navbarli"><img src="https://cdn.ctaetcsh.com/icons/code-slash_black.svg" width="21px" alt="page source"></a></li> <!--Right align, CSS animation to reveal text with code icon-->
             </ul>
 
-            <!--Center of page container-->
+            <!--
+                Centered DIV
+                Anything inside of this DIV will be in a centered, rounded white box.
+            -->
             <div id="center">
                 
-                <!--Contains side by side divs-->
+                <!--
+                    Container for Objects
+                    In here, divs will stack up next to eachother.
+
+                    +--------------------------------------------+
+                    |               |                            |
+                    |               |                            |
+                    |    img        |      discription           |
+                    |    links      |                            |
+                    |               |                            |
+                    +--------------------------------------------+
+                    (These are seperate divs, they just align along a common horizontal line.)
+                    
+                -->
                 <div style="display: flex; width: 690px; margin-right: 0;">
 
+                    <!--Images and outlinks-->
                     <div style="margin-right: 2em;">
                         <img src="https://cdn.ctaetcsh.com/img/ctaetcshfull.png" alt="cat" width="150" style="border-radius: 3em;" id="lecat" onclick="clickLeFuckingCat()"> <br><br>
                         <a href="https://twitter.com/ctaetcsh" id="twitterlink"><img src="https://cdn.ctaetcsh.com/icons/twitter.svg" alt="twitter" width="25px"></a>
@@ -58,7 +79,8 @@
                         <a class="nocoloredlinks" onclick="emailClickable()" id="emailclick" href="javascript:void(0)"><img src="https://cdn.ctaetcsh.com/icons/envelope-fill.svg" alt="email" width="25px"></a>
                     </div>
                     
-                    <div style="text-align: left; word-wrap: normal;">
+                    <!--Description-->
+                    <div style="text-align: left; word-wrap: normal;"><!--Word wrap needed here cause manual br tags suck.-->
                         <h1 style="margin: 0;">about:ctaetcsh</h1>
                         <p>
                             Hi! My name is Nathan, I'm a computer nerd from Portland that loves cats, biking and video games.
@@ -73,10 +95,11 @@
 
             </div>
             
-            <!--bottom right copyright notice-->
+            <!--Bottom Left Copyright Notice-->
             <a style="position: absolute; left: 1em; bottom: 1em; text-align: left; color: white;">Copyright © 2021 Nathan Ritchie</a>
         </div>
 
+        <!--Starts the background-->
         <script>
             VANTA.WAVES({
               el: "#background",
