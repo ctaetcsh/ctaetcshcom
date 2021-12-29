@@ -7,16 +7,43 @@
         <link rel="stylesheet" href="https://cdn.ctaetcsh.com/css/main.css"> 
         <script>
             var catClicked = 0;
+            const eeDate = new Date;
+
+            var catDb = {
+                "default":"https://cdn.ctaetcsh.com/img/ctaetcshfull.png",
+                "festive":"https://cdn.ctaetcsh.com/img/ctaetcsh_festive.png",
+                "angry":"https://cdn.ctaetcsh.com/img/eastereggfull.png",
+                "high":"https://cdn.ctaetcsh.com/img/ctaetcsh_high.png"
+            }
+
+            function updateCat(ucChoice) {
+                document.getElementById("index-cat").src = catDb.ucChoice;
+            }
+
             function catClick() {
                 catClicked = catClicked + 1;
-                if (catClicked > 20) {
-                    document.getElementById("index-cat").src = "https://cdn.ctaetcsh.com/img/eastereggfull.png"
+                if (catClicked > 20) { //click 20 times update image
+                    updateCat("angry")
                     document.getElementById("index-cat").style.borderBottomRightRadius = "0"
+                } else if (catClicked > 2) { //preload image to avoid delayed effect
+                    fetch("https://cdn.ctaetcsh.com/img/eastereggfull.png")
                 }
             }
+
             if (screen.width < 750 || screen.height < 500) {
                 location.assign("https://ctaetcsh.com/m")
             }
+
+            switch(eeDate.getMonth) {
+                case 3:
+                    if (eeDate.getDate == 20) {
+                        updateCat("high")
+                    }
+                    break;
+                case 11:
+                    updateCat("festive")
+            }
+
         </script>
 
         <title>ctaetcsh</title>
